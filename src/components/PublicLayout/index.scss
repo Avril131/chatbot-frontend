@@ -1,0 +1,12 @@
+.layout {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    @include flex(row, flex-start, flex-start);
+
+    .main {
+        height: 100vh;
+        flex: 1;
+    }
+}

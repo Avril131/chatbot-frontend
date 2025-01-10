@@ -1,12 +1,25 @@
-import '@/App.css'
-import AppRoutes from '@/routes'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Login from '@/pages/Login'
+import PublicLayout from '@/components/PublicLayout'
+import Chat from '@/pages/Chat'
+
 
 function App() {
 
   return (
-    <div>
-      <AppRoutes />
-    </div>
+    <Router>
+      <Routes>
+
+        {/* login page, without any layout */}
+        <Route path="login" element={<Login />} />
+
+        {/* other pages, use public layout */}
+        <Route path="/" element={<PublicLayout />}>
+          <Route index element={<Chat />} />
+        </Route>
+
+      </Routes>
+    </Router>
   )
 }
 
