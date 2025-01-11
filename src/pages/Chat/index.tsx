@@ -1,5 +1,3 @@
-import Sidebar from '@/components/Sidebar'
-import React from 'react'
 import { useParams } from 'react-router-dom'
 
 export default function Chat() {
@@ -7,7 +5,6 @@ export default function Chat() {
 
     return (
         <div className="page-chat">
-            <Sidebar uid="" />
         </div>
     )
 }

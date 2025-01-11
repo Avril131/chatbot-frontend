@@ -1,15 +1,19 @@
-$sidebar-background: #ececec;
+$main-surface-tertiary: #ececec;
+$main-surface-secondary-selected: rgba(0, 0, 0, .1);
+$sidebar-surface-primary: #f9f9f9;
+$sidebar-surface-secondary: #ececec;
+$text-primary: #0d0d0d;
+$text-secondary: #5d5d5d;
+$gray-200: #e3e3e3;
 
 /* flex layout */
-@mixin flex(
-  $direction: column,
-  $justify: space-between,
-  $align: flex-start,
-  $wrap: nowrap
-) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  flex-wrap: $wrap;
+@mixin flex($direction: column,
+    $justify: space-between,
+    $align: flex-start,
+    $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
 }

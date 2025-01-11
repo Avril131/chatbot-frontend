@@ -1,6 +1,114 @@
 .sidebar {
     width: 260px;
     height: 100%;
-    background-color: $sidebar-background;
+    overflow: scroll;
+    background-color: $sidebar-surface-primary;
+    @include flex(column, flex-start, flex-start);
+    padding: 0 12px;
+    box-sizing: border-box;
+    position: relative;
+    scrollbar-color: $main-surface-tertiary transparent;
+    z-index: 100;
 
+    .buttons {
+        width: 100%;
+        @include flex(row, space-between, center);
+        background-color: $sidebar-surface-primary;
+        position: sticky;
+        padding: .5rem 0;
+        box-sizing: border-box;
+        top: 0;
+        z-index: 200;
+
+        >*:first-child {
+            margin-right: auto;
+        }
+
+        .sidebar-button {
+            border: 0;
+            background-color: #00000000;
+            box-sizing: border-box;
+            height: 40px;
+            width: 40px;
+            @include flex(row, center, center);
+            border-radius: .5rem;
+            z-index: 200;
+            svg {
+                color: $text-secondary;
+                z-index: 200;
+            }
+        }
+
+        .sidebar-button:hover {
+            background-color: $sidebar-surface-secondary;
+        }
+    }
+
+    .chatlist {
+        width: 100%;
+        @include flex(column, flex-start, flex-start);
+        z-index: 100;
+
+        .chatlist-range {
+            color: $text-primary;
+            width: 100%;
+            padding: 12px 8px 8px;
+            margin: 0;
+            box-sizing: border-box;
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            position: sticky;
+            top: 3.5rem;
+            background-color: $sidebar-surface-primary;
+            z-index: 150;
+        }
+
+        .chatlist-range:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+
+        .chatlist-item {
+            width: 100%;
+            @include flex(row, space-between, center);
+            padding: 8px;
+            box-sizing: border-box;
+            border-radius: .5rem;
+            cursor: pointer;
+            z-index: 100;
+
+            .chatlist-item-title {
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                margin: 0;
+                color: $text-primary;
+                z-index: 100;
+            }
+
+            .chatlist-item-button {
+                border: 0;
+                background-color: #00000000;
+                box-sizing: border-box;
+                opacity: 0;
+                width: 18px;
+                height: 18px;
+                z-index: 200;
+
+                svg {
+                    color: $text-secondary;
+                    width: 18px;
+                    height: 18px;
+                    z-index: 100;
+                }
+            }
+        }
+
+        .chatlist-item:hover {
+            .chatlist-item-button {
+                opacity: 1;
+            }
+        }
+    }
 }
