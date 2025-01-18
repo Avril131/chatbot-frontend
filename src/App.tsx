@@ -3,6 +3,7 @@ import Login from '@/pages/Login'
 import PublicLayout from '@/components/PublicLayout'
 import Chat from '@/pages/Chat'
 import "./App.css"
+import NewChat from './pages/NewChat'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
 
         {/* other pages, use public layout */}
         <Route path="/" element={<PublicLayout />}>
-          <Route index element={<Chat />} />
+          <Route index element={<NewChat />} />
         </Route>
 
       </Routes>

@@ -1,14 +1,22 @@
 .sidebar {
     width: 260px;
     height: 100%;
+    transform: translateX(0);
     overflow: scroll;
+    display: block;
     background-color: $sidebar-surface-primary;
     @include flex(column, flex-start, flex-start);
+    margin: 0;
     padding: 0 12px;
     box-sizing: border-box;
     position: relative;
     scrollbar-color: $main-surface-tertiary transparent;
     z-index: 100;
+    transition: all .6s;
+
+    &.folded {
+        margin-left: -260px;
+    }
 
     .buttons {
         width: 100%;
@@ -33,6 +41,7 @@
             @include flex(row, center, center);
             border-radius: .5rem;
             z-index: 200;
+
             svg {
                 color: $text-secondary;
                 z-index: 200;
@@ -76,6 +85,7 @@
             border-radius: .5rem;
             cursor: pointer;
             z-index: 100;
+            position: relative;
 
             .chatlist-item-title {
                 overflow: hidden;
@@ -93,7 +103,7 @@
                 box-sizing: border-box;
                 opacity: 0;
                 width: 18px;
-                height: 18px;
+                height: 100%;
                 z-index: 200;
 
                 svg {

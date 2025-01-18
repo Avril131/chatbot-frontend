@@ -6,8 +6,24 @@
     @include flex(row, flex-start, flex-start);
 
     .main {
-        height: 100vh;
+        min-height: 100vh;
+        overflow: scroll;
         flex: 1;
         z-index: 100;
+        background-color: $main-surface-background;
+        position: relative;
+
+        .footer {
+            width: 100%;
+            padding: .5rem 0;
+            box-sizing: border-box;
+            @include flex(row, center, center);
+            background-color: $main-surface-background;
+            font-size: .75rem;
+            line-height: 1rem;
+            color: $text-secondary;
+            position: absolute;
+            bottom: 0;
+        }
     }
 }

@@ -1,0 +1,66 @@
+.page-newchat {
+    max-width: 48rem;
+    height: 100vh;
+    margin: auto;
+    @include flex(column, center, center);
+    scrollbar-color: $main-surface-tertiary transparent;
+
+    .title {
+        font-size: 1.875rem;
+        font-weight: 600;
+        line-height: 2.25rem;
+        color: $text-primary;
+    }
+
+    .hints {
+        width: 100%;
+        @include flex(row, center, center);
+
+        .hint {
+            padding: .5rem .75rem;
+            box-sizing: border-box;
+            @include flex(row, flex-start, center);
+            border-radius: 9999px;
+            border-width: 1px;
+            border-color: $border-light;
+            background-color: $main-surface-background;
+
+            svg {
+                width: 18px;
+                height: 18px;
+                margin-right: .5rem;
+            }
+
+            .font {
+                font-size: 14px;
+                line-height: 1.5rem;
+                color: rgb(103, 103, 103);
+            }
+
+            &:hover {
+                background-color: $sidebar-surface-secondary;
+            }
+
+            &:not(:last-child) {
+                margin-right: .625rem;
+            }
+        }
+    }
+}
+
+.page-chat {
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    @include flex(column, flex-start, center);
+
+    .chats {
+        width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 64px;
+        margin-bottom: 130px;
+        overflow: scroll;
+        scrollbar-color: transparent transparent;
+    }
+}

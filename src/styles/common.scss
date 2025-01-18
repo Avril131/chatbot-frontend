@@ -1,10 +1,12 @@
 $main-surface-tertiary: #ececec;
 $main-surface-secondary-selected: rgba(0, 0, 0, .1);
+$main-surface-background: hsla(0, 0%, 100%, .95);
 $sidebar-surface-primary: #f9f9f9;
 $sidebar-surface-secondary: #ececec;
 $text-primary: #0d0d0d;
 $text-secondary: #5d5d5d;
 $gray-200: #e3e3e3;
+$border-light: rgba(0, 0, 0, .1);
 
 /* flex layout */
 @mixin flex($direction: column,

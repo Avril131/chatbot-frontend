@@ -1,0 +1,46 @@
+.message-user {
+    width: 100%;
+    @include flex(column, flex-start, flex-end);
+    padding: 18px 0;
+    box-sizing: border-box;
+
+    .content {
+        max-width: 70%;
+        border-radius: 1.5rem;
+        background-color: #f4f4f4;
+        padding: .625rem 1.25rem;
+        box-sizing: border-box;
+        white-space: break-all;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $text-primary;
+    }
+}
+
+.message-system {
+    width: 100%;
+    @include flex(row, flex-start, flex-start);
+    padding: 18px 0;
+    box-sizing: border-box;
+
+    .avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 9999px;
+        border: .5px solid $border-light;
+        margin-right: 1.5rem;
+    }
+
+    .contents-wrap {
+        flex: 1;
+        @include flex(column, flex-start, flex-start);
+
+        .content {
+            white-space: break-all;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $text-primary;
+            margin-bottom: .5rem;
+        }
+    }
+}
